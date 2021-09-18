@@ -109,6 +109,10 @@ const config = {
         {
           from: join(Assets, 'images'),
           to: 'assets/images',
+        },
+        {
+          from: join(Root, 'node_modules', '@jlongster', 'sql.js', 'dist', 'sql-wasm.wasm'),
+          to: '',
         }
       ]
     }),
