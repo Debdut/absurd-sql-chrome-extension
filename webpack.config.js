@@ -21,14 +21,16 @@ const Dist = join(Root, 'dist');
 const Assets = join(Source, 'assets');
 const Background = join(Source, 'background');
 const Worker = join(Source, 'worker');
+const Content = join(Source, 'content');
 
 const config = {
   mode: process.env.NODE_ENV,
   target: 'web',
-  devtool: isProd ? 'none' : 'cheap-source-map',
+  devtool: isProd ? 'none' : 'source-map',
   entry: {
     background: join(Background, 'index.ts'),
     worker: join(Worker, 'index.ts'),
+    content: join(Content, 'index.ts'),
   },
   output: {
     path: join(__dirname, '../', 'dist'),
